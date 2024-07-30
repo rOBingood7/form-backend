@@ -33,7 +33,7 @@ fetch(baseURL + "/users")
       ul.append(li);
 
       del.onclick = () => {
-        fetch(`http://localhost:8080/users/${user.id}`, {
+        fetch(baseURL + `/users/${user.id}`, {
           method: "DELETE",
         }).then((res) => {
           if (res.status === 200) {
